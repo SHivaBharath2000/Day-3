@@ -1,0 +1,72 @@
+1)//Print odd numbers in an array using arrow function                  output:-[ 5, 53, 99 ]
+var arr=[22,10,5,4,24,88,53,99]
+var odd=arr.filter((value,index,arr)=>{
+  if(arr[index]%2!=0){
+    return `${value} is odd number`
+  }
+})
+console.log(odd)
+
+2)//Print odd numbers in an array using IIFE
+(function() {                                                             output:-[ 5, 53, 99 ]
+   
+   var arr=[22,10,5,4,24,88,53,99]
+   var temp=[]
+   for(var i=0;i<arr.length;i++)
+   {
+    if(arr[i]%2!=0){
+      temp.push(arr[i])
+    }
+   }
+    console.log(temp)
+})();
+
+3)//Convert all the strings to title caps in a string array
+(function() {
+   var temp=[]                                                             OUTPUT-[ 'GUVI,COURSE,FULLSTACK' ]
+   var arr="guvi,course,fullstack".split()
+   for(var i=0;i<arr.length;i++){
+     temp.push(arr[i].toUpperCase())
+   }
+   console.log(temp)
+})();
+
+4)//Convert all the strings to title caps in a string array using arrow function       OUTPUT-[ 'GUVI,COURSE,FULLSTACK' ]
+   var arr="guvi,course,fullstack".split()
+   var temp=arr.map((value,index,arr)=>value.toUpperCase())
+   console.log(temp)
+
+5)//Sum of all numbers in an array using arrow function                         output-149
+   var arr=[12,23,14,55,45]
+   var sum=0
+   var temp=arr.map((value,index,arr)=>console.log(sum=sum+value))
+
+6)//Sum of all numbers in an array using IIFE                          output-149
+(function(a){
+   var arr=a
+   var sum=0
+   for(var i=0;i<arr.length;i++){
+     sum=sum+arr[i]
+   }
+   console.log(sum)
+7)//Return all the prime numbers in an array using IIFE
+(function(a){                                                 output [ 23, 55, 45 ]
+   var arr=a
+   var sum=[]
+   for(var i=0;i<arr.length;i++){
+     if(arr[i]%2!=0){
+       sum.push(arr[i])
+     } 
+   }
+   console.log(sum)
+})([12,23,14,55,45]);
+
+8)//Return all the prime numbers in an array using arrow function         output [ 23, 55, 45 ]
+
+   var arr=[12,23,14,55,45]
+   var sum=arr.filter((value,index,arr)=>{
+     if(value%2!=0){
+       return value
+     }
+   })
+   console.log(sum)
