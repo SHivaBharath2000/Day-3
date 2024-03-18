@@ -70,3 +70,36 @@ console.log(odd)
      }
    })
    console.log(sum)
+9)arrow function using return all prime numbers
+	var arr=["noon","yellow","ball","mom","level"]        o/p[ 'noon', 'mom', 'level' ]
+	var a=(arr)=>
+	{
+	  var temp=[]
+	 for(var i=0;i<arr.length;i++)
+	  {
+	    var b=arr[i].split("")
+	    var c=b.reverse().join("")
+	    if(arr[i]==c){
+	    temp.push(arr[i])
+	    }
+	  }
+	  return temp
+	}
+	console.log(a(arr))
+
+10)//IIFE using find palindromes in array           o/p[ 'noon', 'mom', 'level' ]
+
+var a=(function(arr) {
+    
+  var temp=[]
+for(var i=0;i<arr.length;i++)
+  {
+    var b=arr[i].split("")
+    var c=b.reverse().join("")
+    if(arr[i]==c)
+    {
+    temp.push(arr[i])
+    }
+  }
+  console.log(temp)  
+})(["noon","yellow","ball","mom","level"]);
